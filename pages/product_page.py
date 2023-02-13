@@ -5,9 +5,9 @@ class ProductPage(BasePage):
 	def go_to_product_page(self):
 		add_to_basket = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET)
 		add_to_basket.click()
-		#self.solve_quiz_and_get_code()
+		self.solve_quiz_and_get_code()
 	def should_be_notification_and_price(self):
-		notification_message = self.browser.find_element(*ProductPageLocators.NOTFICATION_MESSAGE)
+		notification_message = self.browser.find_element(*ProductPageLocators.NOTIFICATION_MESSAGE)
 		assert notification_message, "No notification message"
 		return notification_message.text
 
